@@ -34,5 +34,13 @@ cliente.on_message = on_message
 cliente.connect("localhost", 1883, 60)
 cliente.subscribe("sensores/#")
 
-cliente.loop_forever()
+cliente.loop_forever() 
+
+CREATE TABLE datos_sensor (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tipo VARCHAR(50),
+    valor FLOAT,
+    unidad VARCHAR(10),
+    fecha DATETIME DEFAULT CURRENT_TIMESTAMP
+);
 
