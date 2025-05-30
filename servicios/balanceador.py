@@ -18,4 +18,4 @@ def balancear():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(port=6000)
+    app.run(port=5003)
